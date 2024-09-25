@@ -1,6 +1,6 @@
 [project]
 name = "tfl-status"
-version = "0.0.1"
+version = "0.0.2"
 description = "A package to monitor the status updates of the TFL transport lines."
 authors = ["Kia Sambrook <kiasambrook.co.uk>"]
 
