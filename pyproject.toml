@@ -7,3 +7,4 @@ authors = ["Kia Sambrook <kiasambrook.co.uk>"]
 [project.dependencies]
 requests = "^2.32.3"
 nicegui = "^2.1"
+requests-cache = "^1.2.1"
