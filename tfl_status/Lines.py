@@ -9,3 +9,7 @@ class Line:
 class Tube(Line):
     def type():
         return "Tube!"
+
+class Bus(Line):
+    def type():
+        return "Bus!"
