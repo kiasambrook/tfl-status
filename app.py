@@ -1,6 +1,3 @@
-import requests
-from nicegui import ui
+import tfl_status
 
-response = requests.get("https://api.tfl.gov.uk/Line/piccadilly/Status")
-ui.label("HELLO")
-ui.run()
+print(tfl_status.get_lines())

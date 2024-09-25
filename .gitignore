@@ -84,3 +84,4 @@ venv.bak/
 *~ 
 *.sublime-workspace
 .DS_store
+cache/
