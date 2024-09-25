@@ -1,3 +1,3 @@
 import tfl_status
 
-print(tfl_status.getStatus())
+print(tfl_status.getLines())

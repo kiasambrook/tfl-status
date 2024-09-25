@@ -1,2 +1,3 @@
 # __init__.py
-from .tflStatus import getStatus
+from .tflStatus import getLines
+from .Lines import *
