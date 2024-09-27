@@ -1,3 +1,4 @@
-import tfl_status
+from tfl_status import *
 
-print(tfl_status.get_lines())
+lines = get_lines()
+print(get_line_by_modeName(lines, 'tube'))
