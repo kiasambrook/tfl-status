@@ -1,9 +1,15 @@
 import requests_cache
+import os
 import requests
 from typing import List
 
+
+# Create cache directory if it doesn't exist
+cache_dir = "cache"
+os.makedirs(cache_dir, exist_ok=True)
+
 # Initialize the cache session
-session = requests_cache.CachedSession("tfl_cache")
+session = requests_cache.CachedSession(os.path.join(cache_dir, "tfl_cache"))
 
 
 class TFLApi:
