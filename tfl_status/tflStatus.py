@@ -1,6 +1,7 @@
 from .Lines import Line
 from typing import List, Union
 from .tflApi import TFLApi
+from .Stations import Station
 
 
 # Fetch all lines
@@ -14,3 +15,14 @@ def get_lines() -> List[Line]:
         transport_lines.append(Line(line["id"], line["name"]))
 
     return transport_lines
+
+def get_stations() -> List[Station]:
+    api = TFLApi()
+    stations = []
+
+    # Fetch stations
+    stations_response = api.get_stations()
+    for station in stations_response:
+        stations.append(Station(station["id"], station["commonName"]))
+
+    return stations
