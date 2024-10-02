@@ -36,5 +36,7 @@ class TFLApi:
         return self.get("Line/Mode/tube/Disruption", expire_after=600)
 
     def get_stations(self) -> List[dict]:
-        stationResponse = self.get("StopPoint/Mode/tube", expire_after=86400)
-        return stationResponse.stopPoints
+        return self.get("StopPoint/Mode/tube", expire_after=86400)
+
+    def get_arrival_predictions(self, station_id: str) -> List[dict]:
+        return self.get(f"StopPoint/{station_id}/Arrivals", expire_after=30)

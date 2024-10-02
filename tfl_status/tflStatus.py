@@ -22,7 +22,7 @@ def get_stations() -> List[Station]:
 
     # Fetch stations
     stations_response = api.get_stations()
-    for station in stations_response:
+    for station in stations_response['stopPoints']:
         stations.append(Station(station["id"], station["commonName"]))
 
     return stations

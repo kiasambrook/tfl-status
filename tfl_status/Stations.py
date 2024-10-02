@@ -1,3 +1,6 @@
+from .tflApi import *
+
+
 class Station:
     def __init__(self, id, name):
         self.id = id
@@ -9,8 +12,17 @@ class Station:
     def __repr__(self):
         return f"Station(id={self.id}, name='{self.name}')"
 
-    def getArrivalTimes(self):
-        return "No arrival times available"
+    def set_next_arrivals(self):
+        self.next_arrivals = TFLApi().get_arrival_predictions(self.id)
 
-    def getIncidents(self):
+    def get_next_arrivals(self):
+        if not hasattr(self, "next_arrivals"):
+            self.set_next_arrivals()
+
+        if len(self.next_arrivals) == 0:
+            return "No arrivals available"
+
+        return self.next_arrivals
+
+    def get_incidents(self):
         return "No incidents available"
